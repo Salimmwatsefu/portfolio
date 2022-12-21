@@ -59,7 +59,7 @@ function Contact() {
           <div class="mt-4  flex justify-center">
             <button
               type="submit"
-              class="inline-flex w-[700px]  items-center justify-center  bg-transparent px-24 py-4 text-teal-800 border-2 border-teal-800 sm:w-auto"
+              class="inline-flex w-[700px]  items-center justify-center  bg-transparent px-24 py-4 text-teal-800 border-2 border-teal-800 sm:w-auto hover:bg-teal-800 hover:text-white"
             >
               <span class="font-medium text-sm "> SHOOT </span>
 
