@@ -10,7 +10,7 @@ function Navbar() {
         <img src='' alt='Logo' className='ml-5'/>
 
         <div>
-            <p className='ml-28 font-bold'>
+            <p className='ml-28 font-bold hover:bg-teal-500 hover:text-white p-2'>
                 <a href='' className='flex'>
                     <TfiEmail className='text-xl'/>
                     <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>
@@ -34,7 +34,7 @@ function Navbar() {
                 <li className='flex'>
                 <a href='' className='flex'>
                     <RiArticleFill className='text-xl'/>
-                    <p>Articles</p>
+                    <p>Shelf</p>
                 </a>
                 </li>
             </ul>
