@@ -85,6 +85,15 @@ function Contact() {
   </div>
 </section>
 
+<div className='flex justify-center '>
+  <div>
+  <h1 className='font-semibold text-gray-600 text-xl flex justify-center'>Stay connected</h1>
+  <h2 className='mt-7 text-sm text-gray-500 flex justify-center'>Nairobi, Kenya</h2>
+  <p className='mt-3 text-gray-600 font-bold text-2xl flex justify-center mb-3'>sjmwatsefu@gmail.com</p>
+  </div>
+
+</div>
+
     </div>
   )
 }

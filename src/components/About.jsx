@@ -27,7 +27,7 @@ function About() {
         </div>
 
         <div className='flex justify-center items-center mt-16'>
-        <button className='bg-teal-600 w-44 h-16 rounded-full text-white font-semibold hover:bg-gray-400 hover:text-teal-600'>
+        <button className='text-teal-800 border-2 border-teal-800  hover:bg-teal-800 hover:text-white w-44 h-16 rounded-full  font-semibold '>
             See my Work
         </button>
         </div>

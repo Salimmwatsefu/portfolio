@@ -4,7 +4,8 @@ function Projects() {
   return (
     <div className='mt-32'>
         <div className='ml-16'>
-            <h1 className='font-bold text-4xl text-gray-700 border-b-4 border-teal-700 w-64 h-14'>MY PROJECTS</h1>
+            <h1 className='font-bold text-4xl text-gray-700 '>MY PROJECTS</h1>
+            <h2 className=' font-bold text-5xl text-teal-600 -mt-7'>_</h2>
             <p className='mt-3 text-lg text-gray-700'>Here you will find some of the personal and clients projects that I created</p>
             <h2 className='mt-8 font-semibold text-gray-600 text-3xl'>Web Applications</h2>
         </div>
