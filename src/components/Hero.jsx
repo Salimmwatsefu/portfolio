@@ -4,9 +4,9 @@ import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 function Hero() {
   return (
     <div className='mt-32'>
-        <div className='relative ml-28'>
+        <div className='relative sm:ml-28 ml-10'>
             
-            <h1 className=' font-bold text-teal-800 text-6xl'>Salim <br/> Mwatsefu.</h1>
+            <h1 className=' font-bold text-teal-800 md:text-6xl text-3xl'>Salim <br/> Mwatsefu.</h1>
             <h2 className='text-lg font-semibold text-teal-600 mt-4'>Fullstack Developer</h2>
             <p className='mt-5 font-medium text-gray-700'>Software Developer from Nairobi, Kenya<br/> who likes to craft solid and scalable frontend products <br/> with great user experiences.</p>
             <ul className='flex gap-10 text-2xl mt-5 text-teal-400'>

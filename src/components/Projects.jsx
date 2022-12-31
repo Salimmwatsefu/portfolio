@@ -70,7 +70,7 @@ function Projects() {
 
 {/*project 3 */}
 <div className='w-[500px]'>
-     <a href="#" class="group relative block bg-black h-72">
+     <a href="https://importsbysalim.netlify.app/" class="group relative block bg-black h-72">
   <img
     alt="Developer"
     src="importshome.png"
