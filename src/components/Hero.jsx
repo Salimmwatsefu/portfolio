@@ -42,9 +42,9 @@ function Hero() {
         <h2 className='text-lg font-semibold text-teal-600 mt-4'>Fullstack Developer</h2>
             <p className='mt-5 font-medium text-gray-700'>Software Developer from Nairobi, Kenya<br/> who likes to craft solid and scalable frontend products <br/> with great user experiences.</p>
             <ul className='flex gap-10 text-2xl mt-5 text-teal-400'>
-                <li><a href=''><BsGithub/></a></li>
-                <li><a href=''><BsTwitter/></a></li>
-                <li><a href=''><BsLinkedin/></a></li>
+                <li><a href='https://github.com/Salimmwatsefu'><BsGithub/></a></li>
+                <li><a href='https://twitter.com/SalimMwatsefu'><BsTwitter/></a></li>
+                <li><a href='https://www.linkedin.com/in/salim-mwatsefu-694685235/'><BsLinkedin/></a></li>
             </ul>
 
             <button className='bg-teal-600 mt-9 rounded-full h-24 w-24 ml-24'>

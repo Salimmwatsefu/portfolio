@@ -45,7 +45,7 @@ function Navbar() {
             </ul>
 
             <p className=' ml-[500px] absolute font-bold hover:bg-teal-800 hover:text-white p-1 '>
-                <a href='' className='flex'>
+                <a href='mailto:sjmwatsefu@gmail.com' className='flex'>
                     <TfiEmail className='text-xl'/>
                     <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>
                 </a>

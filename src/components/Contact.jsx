@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('mwatsefu25', 'template_3hcernh', e.target, '2Z84E0p83pzjjmPaV')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  };
+
   return (
     <div className='mt-40'>
         <div className='text-center'>
@@ -17,17 +33,18 @@ function Contact() {
       
 
       <div className=" lg:col-span-3 lg:p-12  flex justify-center">
-        <form action="" className="space-y-4  ">
+        <form onSubmit={sendEmail} className="space-y-4  ">
           
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
           <div>
-              <label className="sr-only" for="phone">Name</label>
+              <label className="sr-only" for="phone" >Name</label>
               <h1 className='text-xs pl-3 text-gray-400'>Your Name</h1>
               <input
                 className="w-full  border-gray-300 border-b-2 p-3 text-base text-black"
                 placeholder="Enter Your Name"
                 type="text"
                 id="name"
+                name="name"
               />
             </div>
             <div>
@@ -38,6 +55,7 @@ function Contact() {
                 placeholder="Enter your email address"
                 type="email"
                 id="email"
+                name="email"
               />
             </div>
 
@@ -53,6 +71,7 @@ function Contact() {
               placeholder="Hi, I think we need a certain project at Company X. How soon can you hope on this to discuss"
               rows="2"
               id="message"
+              name='message'
             ></textarea>
           </div>
 
