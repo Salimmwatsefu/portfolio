@@ -31,9 +31,7 @@ function Projects() {
       >
         <h1 className='text-2xl text-white font-bold'>Travelog</h1>
         <p className="text-sm text-white mt-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          perferendis hic asperiores quibusdam quidem voluptates doloremque
-          reiciendis nostrum harum. Repudiandae?
+          React.js, Tailwind CSS, Ruby on Rails and Postgresql
         </p>
       </div>
     </div>
@@ -58,9 +56,7 @@ function Projects() {
       >
         <h1 className='text-2xl text-white font-bold'>Electrohub</h1>
         <p className="text-sm text-white mt-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          perferendis hic asperiores quibusdam quidem voluptates doloremque
-          reiciendis nostrum harum. Repudiandae?
+        React.js, Bootstrap, Ruby Sinatra and Sqlite3
         </p>
       </div>
     </div>
@@ -85,9 +81,7 @@ function Projects() {
       >
         <h1 className='text-2xl text-white font-bold'>ImportsBySalim</h1>
         <p className="text-sm text-white mt-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          perferendis hic asperiores quibusdam quidem voluptates doloremque
-          reiciendis nostrum harum. Repudiandae?
+          HTMl, CSS and JavaScript
         </p>
       </div>
     </div>
