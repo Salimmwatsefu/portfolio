@@ -3,6 +3,7 @@ import { GoProject } from "react-icons/go";
 import { FaUserTie } from "react-icons/fa";
 import { RiArticleFill } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Navbar() {
   return (
@@ -24,12 +25,14 @@ function Navbar() {
         <nav aria-label="Site Nav">
         <div className='ml-[200px] pt-8  flex'>
             <ul className='flex justify-end gap-6 font-normal'>
+              <Link to={"#projects"} smooth>
                 <li className='hover:bg-teal-800 hover:text-white p-1'>
                     <a href='' className='flex '>
                     <GoProject className='text-xl'/>
                     <p className='ml-1 '>Projects</p>
                     </a>
                 </li>
+              </Link>
                 <li className='flex'>
                 <a href='' className='flex hover:bg-teal-800 hover:text-white p-1'>
                     <FaUserTie className='text-xl'/>

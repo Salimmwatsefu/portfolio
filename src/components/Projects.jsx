@@ -2,7 +2,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <div className='mt-32 mx-3'>
+    <div className='mt-32 mx-3' id='projects'>
         <div className='ml-16'>
             <h1 className='font-bold text-4xl text-gray-700 '>MY PROJECTS</h1>
             <h2 className=' font-bold text-5xl text-teal-600 -mt-7'>_</h2>

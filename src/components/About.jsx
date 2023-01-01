@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink as Link } from 'react-router-hash-link';
 
 function About() {
   return (
@@ -87,9 +88,11 @@ function About() {
     </div>
   </div>
   <div className='flex justify-center items-center mt-16'>
+  <Link to={"#projects"} smooth>
         <button className='text-teal-800 border-2 border-teal-800  hover:bg-teal-800 hover:text-white w-44 h-16 rounded-full  font-semibold '>
             See my Work
         </button>
+        </Link>
   </div>
 </section>
 

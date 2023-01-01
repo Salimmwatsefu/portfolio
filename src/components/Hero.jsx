@@ -47,11 +47,13 @@ function Hero() {
                 <li><a href='https://www.linkedin.com/in/salim-mwatsefu-694685235/'><BsLinkedin/></a></li>
             </ul>
 
+           <a href='mailto:sjmwatsefu@gmail.com'>
             <button className='bg-teal-600 mt-9 rounded-full h-24 w-24 ml-24'>
                 
                 <button className='rounded-full h-16 w-16 bg-teal-700 text-white text-sm'>Let's talk</button>
          
             </button>
+            </a>
 
         
 
