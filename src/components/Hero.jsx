@@ -40,7 +40,7 @@ function Hero() {
         <h2 className="text-3xl font-bold sm:text-6xl text-teal-800 ">Salim <br/> Mwatsefu.</h2>
 
         <h2 className='text-lg font-semibold text-teal-600 mt-4'>Fullstack Developer</h2>
-            <p className='mt-5 font-medium text-gray-700'>Software Developer from Nairobi, Kenya<br/> who likes to craft solid and scalable frontend products <br/> with great user experiences.</p>
+            <p className='mt-5 font-medium text-gray-700'>Software Developer from Nairobi, Kenya<br/> who likes to craft solid and scalable software products <br/> with great user experiences.</p>
             <ul className='flex gap-10 text-2xl mt-5 text-teal-400'>
                 <li><a href='https://github.com/Salimmwatsefu'><BsGithub/></a></li>
                 <li><a href='https://twitter.com/SalimMwatsefu'><BsTwitter/></a></li>

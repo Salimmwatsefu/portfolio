@@ -12,7 +12,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App mt-14">
+    <div className="App sm:mt-14">
       <div className='bg-white  sm:w-[1150px] mx-auto rounded-md'>
 
   

@@ -53,7 +53,13 @@ function About() {
           </h1>
         </header>
 
-        <p className='mt-5 text-gray-700 gap-3 text-base'>I'm a <span className='font-bold text-teal-800'>Frontend Web Developer</span> building the Front-end<br/> of Websites  and Web Applications that leads to the<br/> success of the overall product. Check out some of<br/> my work in the Projects section.</p>
+        <p className='mt-5 text-gray-700 gap-3 text-base'>As a <span className='font-bold text-teal-800'>Fullstack Developer</span> I am proficient in both<br/> front-end and back-end technologies.<br/> In addition to my technical skills, I am a strong<br/> problem solver and have excellent communication skills.<br/>I am excited about the opportunity to use my skills and experience to create innovative solutions that make a positive impact.<br/> Check out some of
+        my work in the
+        <Link to={"#projects"} smooth>
+         <span className='font-bold text-teal-800'> Projects section.</span>
+         </Link>
+         </p>
+         
 
         
       </blockquote>
@@ -68,9 +74,9 @@ function About() {
         </header>
 
         <h2 className='mt-5 font-semibold text-gray-600 text-xl'>FRONTEND APPS</h2>
-            <p className=' text-gray-700 gap-3 text-base mt-3'>Build client-side applications with modern features<br/> like SPA and maintain semantic coding style among<br/> other best practices for SEO optimisation. Use<br/> modern tech such as Nuxt (Vue.js), TailwindCSS, and<br/> GSAP.</p>
+            <p className=' text-gray-700 gap-3 text-base mt-3'>I build intuitive and visually appealing client-side<br/>applications with modern features like SPA among<br/> other best practices for SEO optimisation. I Use<br/> modern tech such as <span className='text-teal-800 font-semibold'> React, TailwindCSS, and<br/> JavaScript.</span></p>
             <h2 className='mt-5 font-semibold text-gray-600 text-xl'>BACKEND APPS</h2>
-            <p className=' text-gray-700 gap-3 text-base mt-3'>Build scalable and maintainable server applications<br/> using modern technology stacks such as Node.js,<br/> Express, and MongoDB</p>
+            <p className=' text-gray-700 gap-3 text-base mt-3'>Build scalable and maintainable server applications<br/> using modern technology stacks such as <span className='text-teal-800 font-semibold'> Ruby on Rails,<br/> Sinatra, Sqlite3 and Postgresql.</span></p>
 
 
             
