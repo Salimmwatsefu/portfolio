@@ -8,12 +8,22 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import { HashLink as Link } from 'react-router-hash-link';
+import { motion } from 'framer-motion';
+
+
+
+
 
 function App() {
+
+
+
   return (
     <BrowserRouter>
+    <motion.div initial="hidden" animate="show">
     <div className="App sm:mt-14">
       <div className='bg-white  sm:w-[1150px] mx-auto rounded-md'>
+      
 
   
 
@@ -26,7 +36,10 @@ function App() {
 
       <Footer/>
 
+      
+
     </div>
+    </motion.div>
     </BrowserRouter>
   );
 }

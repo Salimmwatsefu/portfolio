@@ -1,11 +1,17 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { GoProject } from "react-icons/go";
-import { FaUserTie } from "react-icons/fa";
+import { FaUserTie, FaBars, FaTimes} from "react-icons/fa";
 import { RiArticleFill } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
 import { HashLink as Link } from 'react-router-hash-link';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-function Navbar() {
+{/*function Navbar() {
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div className='text-gray-600 flex'>
 
@@ -21,7 +27,7 @@ function Navbar() {
         </a>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden md:block ">
         <nav aria-label="Site Nav">
         <div className='ml-[200px] pt-8  flex'>
             <ul className='flex justify-end gap-6 font-normal'>
@@ -63,24 +69,18 @@ function Navbar() {
       <div className="flex items-center gap-4">
         
 
-        <div className="block md:hidden">
+        <div className="block md:hidden ">
           <button
             className="rounded bg-gray-100 p-2 mt-5 text-teal-600 transition hover:text-gray-600/75"
+            onClick={() => setOpen(!open)}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            {open ? (
+            <FaBars />
+            ):(
+              <FaTimes/>
+            )}
+
+            
           </button>
         </div>
       </div>
@@ -143,12 +143,12 @@ function Navbar() {
 		<path d="M4 6h16M4 12h16M4 18h16"></path>
 		</svg>
 	</button>
-</div>
+</div>*/}
 
 
 
 
-<div class="hidden mobile-menu">
+{/*<div class={`hidden mobile-menu ${open ? "block" : "hidden"}`} onClick={() => setOpen(false)} >
 	<ul class="">
 		<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
 		<li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
@@ -156,9 +156,108 @@ function Navbar() {
 		<li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
 	</ul>
 </div>
-*/}
+
     </div>
+  )
+}*/}
+
+
+
+const navigation = [
+  { name: 'Projects', href: '#', current: false },
+  { name: 'Shelf', href: '#', current: false },
+  { name: 'Resume', href: '#', current: false },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export default function Example() {
+  return (
+    <Disclosure as="nav" className="">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
+                  <img
+                    className="block w-40  lg:hidden"
+                    src="sjmwatzz.png"
+                    alt="Your Company"
+                  />
+                  <img
+                    className="hidden w-40 lg:block mt-10"
+                    src="sjmwatzz.png"
+                    alt="Your Company"
+                  />
+                </div>
+                <div className="hidden sm:ml-[250px] sm:block">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-teal-800 text-white' : 'text-gray-700 hover:bg-teal-800 hover:text-white',
+                          'px-3 mt-24 rounded-md text-base font-normal'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                      
+                    ))}
+                  </div>
+                  
+                </div>
+                <p className=' ml-[900px] absolute mt-[90px] font-bold text-gray-700 hover:bg-teal-800 hover:text-white p-1 '>
+                <a href='mailto:sjmwatsefu@gmail.com' className='flex'>
+                    <TfiEmail className='text-xl'/>
+                    <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>
+                </a>
+            </p>
+              </div>
+              
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pt-7 bg-gray-100 ">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? ' text-white' : 'text-gray-700 hover:bg-teal-800 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-normal'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   )
 }
 
-export default Navbar
+
+
+{/*export default Navbar*/}
