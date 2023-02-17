@@ -62,7 +62,7 @@ const textLeave = () => setCursorVariant("default");*/}
     <BrowserRouter>
     <motion.div initial="hidden" animate="show">
     <div >
-      <div className='bg-white  sm:w-[1150px] mx-auto rounded-md mt-14'>
+      <div className='bg-white  sm:w-[1150px] mx-auto rounded-md md:mt-14'>
 
       {/*<motion.div
         className='cursor'
