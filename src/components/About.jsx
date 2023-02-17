@@ -1,8 +1,53 @@
-import React from 'react'
+
 import { HashLink as Link } from 'react-router-hash-link'; 
 import { BiRightArrow } from "react-icons/bi";
+import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 
 function About() {
+
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+
+  useEffect(() => {
+    const mouseMove = e => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      })
+    }
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    }
+  }, []);
+
+  
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 80,
+      width: 80,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference"
+    }
+  }
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
   return (
     <div className='mt-20'>
         <div>
@@ -67,7 +112,7 @@ function About() {
             <p className=' text-gray-700 gap-3 text-base mt-6'>I build intuitive and visually appealing client-side<br/>applications with modern features like SPA among<br/> other best practices for SEO optimisation. I Use<br/> modern tech such as:
             
             {/*<span className='text-teal-800 font-semibold'> React, TailwindCSS, and<br/> JavaScript.</span>*/}
-            <div className='grid grid-cols-2 mt-6 gap-2 '>
+            <div className='grid grid-cols-2 mt-6 gap-2 ' >
             <span className='flex text-sm gap-2'>
               <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Javascript  (ES6+)
               </span>

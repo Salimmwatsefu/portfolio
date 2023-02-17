@@ -1,11 +1,51 @@
 
 import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
-import React, { Suspense } from 'react';
-import Typist from "react-typist";
+import React, { useEffect, useState } from 'react';
+
 import { motion } from "framer-motion";
 import { homeAnimation, homeInfoAnimation } from "../animation";
 
 function Hero() {
+
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+
+  useEffect(() => {
+    const mouseMove = e => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      })
+    }
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    }
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 80,
+      width: 80,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference"
+    }
+  }
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
   return (
     <div className='mt-10'>
         {/*<div className='relative ml-28 '>
@@ -27,6 +67,12 @@ function Hero() {
 
   </div>*/}
 
+<motion.div
+        className='cursor'
+        variants={variants}
+        animate={cursorVariant}
+      />
+
 <section>
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
@@ -46,9 +92,9 @@ function Hero() {
 
 
       <div className="lg:py-10 lg:ml-20">
-        <Typist cursor={{show: false}} avgTypingDelay={200} >
-        <h2 className="text-3xl font-bold sm:text-6xl text-teal-800 ">Salim <br/> Mwatsefu.</h2>
-        </Typist>
+        
+        <h2 className="text-3xl font-bold sm:text-6xl text-teal-800 " onMouseEnter={textEnter} onMouseLeave={textLeave}>Salim <br/> Mwatsefu.</h2>
+       
       
         <motion.div 
       variants={homeAnimation}
