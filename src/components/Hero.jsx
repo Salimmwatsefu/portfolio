@@ -76,19 +76,7 @@ function Hero() {
 <section>
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-    <div
-        className="relative h-80 overflow-hidden rounded-full shadow-2xl shadow-teal-700 sm:h-80 lg:order-last lg:h-full bg-blue-600"
-      >
-        
-        <img
-          alt="Salim"
-          src = "portfolio3.png"
-          //src="https://img.freepik.com/free-vector/saving-nature-with-technology-concept_52683-33408.jpg?size=626&ext=jpg"
-          className="absolute  w-[800px] h-[400px] object-cover object-center ml-20 mt-14"
-/>
-     
-</div>
-
+    
 
 
       <div className="lg:py-10 lg:ml-20">
@@ -136,6 +124,20 @@ function Hero() {
 
         
       </div>
+
+      <div
+        className="relative h-80 overflow-hidden md:block hidden rounded-full shadow-2xl shadow-teal-700 sm:h-80 order-first lg:order-last lg:h-full bg-blue-600"
+      >
+        
+        <img
+          alt="Salim"
+          src = "portfolio3.png"
+          //src="https://img.freepik.com/free-vector/saving-nature-with-technology-concept_52683-33408.jpg?size=626&ext=jpg"
+          className="absolute  w-[800px] h-[400px] object-cover object-center ml-20 mt-14"
+/>
+     
+</div>
+
     </div>
   </div>
 </section>
