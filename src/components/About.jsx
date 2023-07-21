@@ -114,10 +114,16 @@ function About() {
             {/*<span className='text-teal-800 font-semibold'> React, TailwindCSS, and<br/> JavaScript.</span>*/}
             <div className='grid grid-cols-2 mt-6 gap-2 ' >
             <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Typecscript
+              </span>
+            <span className='flex text-sm gap-2'>
               <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Javascript  (ES6+)
               </span>
               <span className='flex text-sm gap-2'>
-              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>React
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Next Js
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>React Js
               </span>
               <span className='flex text-sm gap-2'>
               <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Tailwind Css
