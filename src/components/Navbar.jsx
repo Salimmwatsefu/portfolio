@@ -5,7 +5,7 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon  } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Projects', href: '#projects', current: false },
+  { name: 'Projects', href: '#', current: false },
   { name: 'Shelf', href: 'https://medium.com/@sjmwatsefu', current: false },
 ];
 
@@ -52,8 +52,9 @@ export default function Example() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Fragment key={item.name}>
-                        <Link
-                          to={item.href}
+                        <a
+                          href={item.href}
+                          target='_blank'
                           className={classNames(
                             item.current ? 'bg-teal-800 text-white' : 'text-gray-700 hover:bg-teal-800 hover:text-white',
                             'px-3 mt-24 rounded-md text-base font-normal'
@@ -61,7 +62,7 @@ export default function Example() {
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </a>
                       </Fragment>
                     ))}
                     {/* Download link for Resume */}
