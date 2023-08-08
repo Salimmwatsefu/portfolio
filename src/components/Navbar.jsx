@@ -20,7 +20,7 @@ export default function Example() {
   };
 
   return (
-    <Disclosure as="nav" className="">
+    <Disclosure as="nav" className=" ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -77,7 +77,7 @@ export default function Example() {
                     </button>
                   </div>
                 </div>
-                <p className='ml-[900px] absolute mt-[90px] font-bold text-gray-700 hover:bg-teal-800 hover:text-white p-1 '>
+                <p className='hidden sm:block ml-[900px] absolute mt-[90px] font-bold text-gray-700 hover:bg-teal-800 hover:text-white p-1 '>
                   <a href='mailto:sjmwatsefu@gmail.com' className='flex'>
                     <TfiEmail className='text-xl'/>
                     <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>
