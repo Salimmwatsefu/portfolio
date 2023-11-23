@@ -21,8 +21,8 @@ function Contact() {
     <div className='mt-40'>
         <div className='text-center'>
             <h1 className='flex justify-center font-bold text-5xl text-teal-800'>Send me a message!</h1>
-            <p className='flex justify-center mt-6 text-xl font-medium text-gray-800'>Got a question or proposal, or just want</p>
-            <p className='flex justify-center text-xl font-medium text-gray-800'>to say hello? Go ahead.</p>
+            <p className='flex justify-center mt-6 text-xl font-medium text-gray-800 dark:text-gray-500'>Got a question or proposal, or just want</p>
+            <p className='flex justify-center text-xl font-medium text-gray-800 dark:text-gray-500'>to say hello? Go ahead.</p>
         </div>
 
        

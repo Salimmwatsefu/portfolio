@@ -3,6 +3,9 @@ import { TfiEmail } from "react-icons/tfi";
 import { HashLink as Link } from 'react-router-hash-link';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon  } from '@heroicons/react/24/outline';
+import { FiMoon, FiSun } from "react-icons/fi";
+import DarkModeButton from './DarkModeButton';
+
 
 const navigation = [
   { name: 'Projects', href: '#', current: false },
@@ -13,7 +16,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function Example({toggleDarkMode, darkMode}) {
   const handleResumeClick = () => {
     // Replace '/resume.pdf' with the actual path to your resume file
     window.open('/Resume.pdf', '_blank');
@@ -48,6 +51,13 @@ export default function Example() {
                     alt="Your Company"
                   />
                 </div>
+
+                <div className='  h-10 w-10 ml-24 mt-24'>
+                
+        <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+     
+                </div>
+
                 <div className="hidden sm:ml-[250px] sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -56,7 +66,7 @@ export default function Example() {
                           href={item.href}
                           target='_blank'
                           className={classNames(
-                            item.current ? 'bg-teal-800 text-white' : 'text-gray-700 hover:bg-teal-800 hover:text-white',
+                            item.current ? 'bg-teal-800 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white',
                             'px-3 mt-24 rounded-md text-base font-normal'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -69,7 +79,7 @@ export default function Example() {
                     <button
                       onClick={handleResumeClick}
                       className={classNames(
-                        'text-gray-700 hover:bg-teal-800 hover:text-white',
+                        'text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white',
                         'px-3 mt-24 rounded-md text-base font-normal'
                       )}
                     >
@@ -77,7 +87,7 @@ export default function Example() {
                     </button>
                   </div>
                 </div>
-                <p className='hidden sm:block ml-[900px] absolute mt-[90px] font-bold text-gray-700 hover:bg-teal-800 hover:text-white p-1 '>
+                <p className='hidden sm:block ml-[900px] absolute mt-[90px] font-bold text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white p-1 '>
                   <a href='mailto:sjmwatsefu@gmail.com' className='flex'>
                     <TfiEmail className='text-xl'/>
                     <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>

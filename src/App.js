@@ -16,64 +16,33 @@ import { motion } from 'framer-motion';
 
 function App() {
 
-  {/*const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0
-  });
-  const [cursorVariant, setCursorVariant] = useState("default");
+ const [darkMode, setDarkMode] = useState(false)
 
+ const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+ };
 
-  useEffect(() => {
-    const mouseMove = e => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
-      })
-    }
+ useEffect(() => {
+  // Update body background color based on darkMode state
+  document.body.style.backgroundColor = darkMode ? '#01161E' : 'rgb(240, 237, 237)';
 
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    }
-  }, []);
-
-  const variants = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: "yellow",
-      mixBlendMode: "difference"
-    }
-  }
-
-  const textEnter = () => setCursorVariant("text");
-const textLeave = () => setCursorVariant("default");*/}
-
+  // Clean up the effect to prevent memory leaks
+  return () => {
+    document.body.style.backgroundColor = ''; // Reset background color on unmount
+  };
+}, [darkMode]);
 
 
   return (
     <BrowserRouter>
-    <motion.div initial="hidden" animate="show">
+    <motion.div initial="hidden" animate="show" className={`${darkMode && "dark"}`}>
     <div >
-      <div className='bg-white  sm:w-[1150px] mx-auto rounded-md md:mt-14 !overflow-x-hidden'>
+      <div className='bg-white dark:bg-[#06070E]   sm:w-[1150px] mx-auto rounded-md md:mt-14 !overflow-x-hidden'>
 
-      {/*<motion.div
-        className='cursor'
-        variants={variants}
-        animate={cursorVariant}
-  />*/}
       
-
   
 
-      <Navbar  />
+      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <Hero />
       <About />
       <Projects/>

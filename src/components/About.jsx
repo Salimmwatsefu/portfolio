@@ -51,10 +51,10 @@ function About() {
   return (
     <div className='mt-20'>
         <div>
-            <h1 className='flex justify-center text-4xl font-bold text-gray-700'>ABOUT ME</h1>
-            <h2 className=' font-bold text-5xl flex justify-center text-teal-600 -mt-7'>_</h2>
-            <p className='flex justify-center mt-6 text-gray-700 font-medium text-center w-auto'>Here you will find more information about me, what I do, and my current skills mostly in terms </p>
-            <p className='flex justify-center text-gray-700 font-medium'>of programming and technology</p>
+            <h1 className='flex justify-center text-4xl font-bold text-gray-700 dark:text-gray-300'>ABOUT ME</h1>
+            <h2 className=' font-bold text-5xl flex justify-center text-teal-600  -mt-7'>_</h2>
+            <p className='flex justify-center mt-6 text-gray-700 dark:text-gray-400 font-medium text-center w-auto'>Here you will find more information about me, what I do, and my current skills mostly in terms </p>
+            <p className='flex justify-center text-gray-700 dark:text-gray-400 font-medium'>of programming and technology</p>
         </div>
         
 
@@ -73,12 +73,12 @@ function About() {
       <blockquote>
         <header className="sm:flex sm:items-center">
           
-          <h1 className="mt-2 font-bold sm:ml-4 sm:mt-0 text-gray-700 text-2xl">
+          <h1 className="mt-2 font-bold sm:ml-4 sm:mt-0 text-gray-700 dark:text-gray-300 text-2xl">
           Get to know me!
           </h1>
         </header>
 
-        <p className='mt-5 text-gray-700 gap-3 text-base'>As a <span className='font-bold text-teal-800'>Fullstack Developer</span> I am proficient in both<br/> front-end and back-end technologies.<br/> In addition to my technical skills, I am a strong<br/> problem solver and have excellent communication skills.<br/>I am excited about the opportunity to use my skills and experience to create innovative solutions that make a positive impact.<br/> Check out some of
+        <p className='mt-5 text-gray-700 dark:text-gray-500 gap-3 text-base'>As a <span className='font-bold text-teal-800'>Fullstack Developer</span> I am proficient in both<br/> front-end and back-end technologies.<br/> In addition to my technical skills, I am a strong<br/> problem solver and have excellent communication skills.<br/>I am excited about the opportunity to use my skills and experience to create innovative solutions that make a positive impact.<br/> Check out some of
         my work in the
         <Link to={"#projects"} smooth>
          <span className='font-bold text-teal-800'> Projects section.</span>
@@ -103,18 +103,18 @@ function About() {
         <header class="sm:flex sm:items-center">
           
 
-          <h1 class="mt-2 sm:ml-4 sm:mt-0 text-gray-700 font-bold text-2xl">
+          <h1 class="mt-2 sm:ml-4 sm:mt-0 text-gray-700 dark:text-gray-300 font-bold text-2xl">
             My Skills
           </h1>
         </header>
 
-        <h2 className='mt-10 font-semibold text-gray-600 text-xl'>FRONTEND APPS</h2>
-            <p className=' text-gray-700 gap-3 text-base mt-6'>I build intuitive and visually appealing client-side<br/>applications with modern features like SPA among<br/> other best practices for SEO optimisation. I Use<br/> modern tech such as:
+        <h2 className='mt-10 font-semibold text-gray-600 dark:text-gray-400 text-xl'>FRONTEND APPS</h2>
+            <p className=' text-gray-700 gap-3 text-base mt-6 dark:text-gray-500'>I build intuitive and visually appealing client-side<br/>applications with modern features like SPA among<br/> other best practices for SEO optimisation. I Use<br/> modern tech such as:
             
             {/*<span className='text-teal-800 font-semibold'> React, TailwindCSS, and<br/> JavaScript.</span>*/}
             <div className='grid grid-cols-2 mt-6 gap-2 ' >
             <span className='flex text-sm gap-2'>
-              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Typecscript
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Typescript
               </span>
             <span className='flex text-sm gap-2'>
               <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Javascript  (ES6+)
@@ -142,8 +142,8 @@ function About() {
               </span>
               </div>
               </p>
-            <h2 className='mt-16 font-semibold text-gray-600 text-xl'>BACKEND APPS</h2>
-            <p className=' text-gray-700 gap-3 text-base mt-6'>Build scalable and maintainable server applications<br/> using modern technology stacks such as: 
+            <h2 className='mt-16 font-semibold text-gray-600 dark:text-gray-400 text-xl'>BACKEND APPS</h2>
+            <p className=' text-gray-700 dark:text-gray-500 gap-3 text-base mt-6'>Build scalable and maintainable server applications<br/> using modern technology stacks such as: 
             <div className='grid grid-cols-2 mt-6 gap-2'>
             <span className='flex text-sm gap-2'>
               <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Ruby on Rails
