@@ -15,7 +15,7 @@ function Projects() {
       {/*Vicshiy */}
 
       <div className='w-[500px]'>
-     <a href="https://travelog7.vercel.app/" target='_blank' className="group relative block bg-black h-72">
+     <a href="https://www.vicshiytours.co.ke/" target='_blank' className="group relative block bg-black h-72">
   <img
     alt="Travel"
     src="vicshiy.png"
@@ -45,7 +45,7 @@ the bespoke travel landscape across East Africa.</p>
 
       {/*Tepa */}
       <div className='w-[500px]'>
-     <a href="https://travelog7.vercel.app/" target='_blank' className="group relative block bg-black h-72">
+     <a href="https://www.tepa2030.org/" target='_blank' className="group relative block bg-black h-72">
   <img
     alt="tepa"
     src="tepass.png"
