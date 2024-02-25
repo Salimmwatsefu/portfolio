@@ -111,20 +111,20 @@ function Hero() {
         
       </div>
 
-      {/*<div
-        className="relative h-80 overflow-hidden md:block hidden rounded-full shadow-2xl shadow-teal-700 sm:h-80 order-first lg:order-last lg:h-full bg-blue-600"
+      <div
+        className="sm:relative h-[420px] sm:overflow-hidden  rounded-full shadow-xl md:shadow-teal-600 dark:shadow-teal-300  sm:h-80 order-last lg:h-full bg-teal-800"
       >
         
         <img
           alt="Salim"
-          src = "portfolio3.png"
+          src = "hero1.png"
           //src="https://img.freepik.com/free-vector/saving-nature-with-technology-concept_52683-33408.jpg?size=626&ext=jpg"
-          className="absolute  w-[800px] h-[400px] object-cover object-center ml-20 mt-14"
+          className="absolute  sm:w-[1200px] w-[400px] h-[460px] sm:h-[600px] object-cover sm:object-center sm:-ml-40 -ml-36 -mt-5"
 />
      
-  </div>*/}
+  </div>
 
-  <div><ShuffleGrid /></div>
+  {/*<div><ShuffleGrid /></div>*/}
 
   
 
@@ -135,6 +135,8 @@ function Hero() {
     </div>
   )
 }
+
+{/*
 
 const shuffle = (array) => {
   let currentIndex = array.length,
@@ -214,5 +216,6 @@ const ShuffleGrid = () => {
     </div>
   );
 };
+*/}
 
 export default Hero

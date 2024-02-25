@@ -6,7 +6,7 @@ function Projects() {
         <div className='sm:ml-16'>
             <h1 className='font-bold text-4xl text-gray-700 dark:text-gray-300 text-center'>MY PROJECTS</h1>
             <h2 className=' font-bold text-5xl text-teal-600 -mt-7 text-center'>_</h2>
-            <p className='mt-3 text-lg text-gray-700 dark:text-gray-400'>Here you will find some of the personal and clients projects that I created</p>
+            <p className='mt-3 text-lg text-gray-700 dark:text-gray-400 text-center'>Here you will find some of the personal and clients projects that I created</p>
             <h2 className='mt-8 font-semibold text-gray-600 text-3xl dark:text-gray-300'>Web Applications</h2>
         </div>
 

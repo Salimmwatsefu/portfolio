@@ -16,8 +16,8 @@ const DarkModeButton = ({ darkMode, toggleDarkMode }) => {
         }`}
         onClick={toggleDarkMode}
       >
-        <FiMoon className="relative z-10 text-lg md:text-sm" />
-        <span className="relative z-10">Light</span>
+        <FiSun className="relative z-10 text-lg md:text-sm" />
+        <span className="relative z-10 hidden md:block">Light</span>
       </button>
       <button
         className={`${TOGGLE_CLASSES} ${
@@ -25,8 +25,8 @@ const DarkModeButton = ({ darkMode, toggleDarkMode }) => {
         }`}
         onClick={toggleDarkMode}
       >
-        <FiSun className="relative z-10 text-lg md:text-sm" />
-        <span className="relative z-10">Dark</span>
+        <FiMoon className="relative z-10 text-lg md:text-sm" />
+        <span className="relative z-10 hidden md:block">Dark</span>
       </button>
       <div
         className={`absolute inset-0 z-0 flex ${
@@ -36,7 +36,7 @@ const DarkModeButton = ({ darkMode, toggleDarkMode }) => {
         <motion.span
           layout
           transition={{ type: 'spring', damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-full bg-gradient-to-r from-teal-800 to-indigo-600"
+          className="h-full w-1/2 rounded-full bg-gradient-to-r from-teal-500 to-teal-800"
         />
       </div>
     </div>

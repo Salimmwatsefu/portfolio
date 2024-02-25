@@ -41,7 +41,7 @@ export default function Example({toggleDarkMode, darkMode}) {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block w-40 lg:hidden"
+                    className="block w-40 lg:hidden mt-5 ml-5"
                     src="sjmwatzz.png"
                     alt="Your Company"
                   />
@@ -52,7 +52,7 @@ export default function Example({toggleDarkMode, darkMode}) {
                   />
                 </div>
 
-                <div className='  h-10 w-10 ml-24 mt-24'>
+                <div className='  h-10 w-10 md:ml-24 md:mt-24 ml-5'>
                 
         <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
      
