@@ -8,7 +8,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('mwatsefu25', 'template_3hcernh', e.target, '2Z84E0p83pzjjmPaV')
+    emailjs.sendForm('service_vlj04gn', 'template_1ixqcjp', e.target, 'P7x9qr1XECCxNDqXh')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -16,6 +16,20 @@ function Contact() {
       });
       e.target.reset()
   };
+
+  /*emailjs
+      .sendForm('service_vlj04gn', 'template_1ixqcjp', form.current, {
+        publicKey:'P7x9qr1XECCxNDqXh',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };*/
 
   return (
     <div className='mt-40'>
@@ -33,7 +47,7 @@ function Contact() {
       
 
       <div className=" lg:col-span-3 lg:p-12  flex justify-center">
-        <form onSubmit={sendEmail} className="space-y-4  ">
+        <form onSubmit={sendEmail} ref={form} className="space-y-4  ">
           
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
           <div>
@@ -44,7 +58,7 @@ function Contact() {
                 placeholder="Enter Your Name"
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
               />
             </div>
             <div>
@@ -55,7 +69,7 @@ function Contact() {
                 placeholder="Enter your email address"
                 type="email"
                 id="email"
-                name="email"
+                name="user_email"
               />
             </div>
 

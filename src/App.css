@@ -13,4 +13,15 @@
     left: 0;
     pointer-events: none;
   }
+
+
+/* custom.css */
+.blur-background {
+  transition: filter 0.3s ease;
+}
+
+.group:hover .blur-background {
+  filter: blur(20px);
+}
+
   
