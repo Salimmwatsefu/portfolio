@@ -1,14 +1,20 @@
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
+import Hero2 from './components/Hero2';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Route } from 'react-router-dom';
+import OutsideWork from './components/OutsideWork';
+import Professional from './components/Professional';
+import Blog from './components/Blog';
+import Projects2 from './components/Projects2';
 
 
 
@@ -24,7 +30,7 @@ function App() {
 
  useEffect(() => {
   // Update body background color based on darkMode state
-  document.body.style.backgroundColor = darkMode ? '#01161E' : 'rgb(240, 237, 237)';
+  document.body.style.backgroundColor = darkMode ? '#01161E' : '#d6d3d1';
 
   // Clean up the effect to prevent memory leaks
   return () => {
@@ -36,17 +42,24 @@ function App() {
   return (
     <BrowserRouter>
     <motion.div initial="hidden" animate="show" className={`${darkMode && "dark"}`}>
-    <div >
-      <div className='bg-white dark:bg-[#06070E]   sm:w-[1150px] mx-auto rounded-md md:mt-14 !overflow-x-hidden'>
+    <div  >
+      <div className='bg-white dark:bg-[#06070E]   sm:w-[1150px] mx-auto rounded-md md:mt-10 !overflow-x-hidden'>
 
       
   
 
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
-      <Hero />
-      <About />
-      <Projects/>
-      <Contact/>
+
+      <Routes>
+        <Route path='/' element={<Hero2 />} />
+
+        <Route path='/about' element={<About />} />
+        <Route path='/projects' element={<Projects/>} />
+        <Route path='/outside-work' element={<OutsideWork />} />
+        <Route path='/professional' element={<Professional />} />
+        <Route path='/blog' element={<Blog />} />
+  
+      </Routes>
       </div>
 
 

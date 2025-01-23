@@ -4,6 +4,8 @@ import React, { useEffect, useState, useRef } from 'react';
 
 import { motion } from "framer-motion";
 import { homeAnimation, homeInfoAnimation } from "../animation";
+import EffectCards from "./EffectCards";
+import EffectCards2 from "./EffectCards2";
 
 
 function Hero() {
@@ -60,14 +62,14 @@ function Hero() {
       />
 
 <section>
-  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+  <div className="mx-auto max-w-screen-xl px-4 py-8  sm:px-6 lg:px-8">
+    <div className=" ">
     
 
 
-      <div className="lg:py-10 lg:ml-20">
+      <div className="lg:py-9 lg:ml-10">
         
-        <h2 className="text-3xl font-bold sm:text-6xl text-teal-800 dark:text-teal-700  " onMouseEnter={textEnter} onMouseLeave={textLeave}>Salim <br/> Mwatsefu.</h2>
+        <h2 className="text-3xl font-bold sm:text-5xl text-teal-800 dark:text-teal-700  " onMouseEnter={textEnter} onMouseLeave={textLeave}>Salim <br/>  Mwatsefu.</h2>
        
       
         <motion.div 
@@ -111,17 +113,21 @@ function Hero() {
         
       </div>
 
-      <div
+    {/*<div
         className="sm:relative h-[420px] sm:overflow-hidden  rounded-full shadow-xl md:shadow-teal-600 dark:shadow-teal-300  sm:h-80 order-last lg:h-full bg-teal-800"
       >
         
         <img
           alt="Salim"
-          src = "hero1.png"
+          src = "ill1.png"
           //src="https://img.freepik.com/free-vector/saving-nature-with-technology-concept_52683-33408.jpg?size=626&ext=jpg"
           className="absolute  sm:w-[1200px] w-[400px] h-[460px] sm:h-[600px] object-cover sm:object-center sm:-ml-40 -ml-36 -mt-5"
 />
      
+  </div>*/}
+
+  <div className="ml-[340px]">
+    <EffectCards2 />
   </div>
 
   {/*<div><ShuffleGrid /></div>*/}

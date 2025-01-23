@@ -46,53 +46,19 @@ export default function Example({toggleDarkMode, darkMode}) {
                     alt="Your Company"
                   />
                   <img
-                    className="hidden w-40 lg:block mt-10"
+                    className="hidden w-28 lg:block mt-10 absolute  "
                     src="sjmwatzz.png"
                     alt="Your Company"
                   />
                 </div>
 
-                <div className='  h-10 w-10 md:ml-24 md:mt-24 ml-5'>
+                <div className='  h-10 w-10 absolute top-8 right-[200px]'>
                 
         <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
      
                 </div>
 
-                <div className="hidden sm:ml-[250px] sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <Fragment key={item.name}>
-                        <a
-                          href={item.href}
-                          target='_blank'
-                          className={classNames(
-                            item.current ? 'bg-teal-800 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white',
-                            'px-3 mt-24 rounded-md text-base font-normal'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      </Fragment>
-                    ))}
-                    {/* Download link for Resume */}
-                    <button
-                      onClick={handleResumeClick}
-                      className={classNames(
-                        'text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white',
-                        'px-3 mt-24 rounded-md text-base font-normal'
-                      )}
-                    >
-                      Resume
-                    </button>
-                  </div>
-                </div>
-                <p className='hidden sm:block ml-[900px] absolute mt-[90px] font-bold text-gray-700 dark:text-gray-300 hover:bg-teal-800 hover:text-white p-1 '>
-                  <a href='mailto:sjmwatsefu@gmail.com' className='flex'>
-                    <TfiEmail className='text-xl'/>
-                    <span className='ml-1 text-sm'>sjmwatsefu@gmail.com</span>
-                  </a>
-                </p>
+                
               </div>
             </div>
           </div>
