@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Card = ({ index, title, bgImage, transform, onHover, offHover, borderColor }) => (
   <Link to={`/${title.toLowerCase().replace(" ", "-")}`}>
     <motion.div
-      className={`absolute w-[250px] h-[300px] rounded-lg shadow-lg flex flex-col justify-center items-center text-center bg-cover bg-center transition-transform duration-300 border-4 border-${borderColor}-700`}
+      className={`absolute w-[250px] h-[300px] rounded-lg shadow-lg flex flex-col justify-center items-center text-center bg-cover bg-center transition-transform duration-300 border-4 border-teal-500`}
       style={{
         transformOrigin: "center bottom",
         transform: transform,
@@ -19,9 +19,9 @@ const Card = ({ index, title, bgImage, transform, onHover, offHover, borderColor
       onMouseLeave={offHover}
       initial={{ opacity: 0, y: 100 }} // Initial state: opacity 0, y offset down
       animate={{ opacity: 1, y: 0, transform }} // Animate to the target position
-      transition={{ duration: 0.3, delay: 1, ease: "linear" }}
+      transition={{  }}
     >
-      <div className={`bg-${borderColor}-900 bg-opacity-70 w-full h-full rounded-lg flex flex-col justify-start items-center p-4`}>
+      <div className={`bg-black bg-opacity-50 w-full h-full rounded-lg flex flex-col justify-start items-center p-4 `}>
         <h3 className="text-lg font-bold text-white mb-2 mt-7">{title}</h3>
       </div>
     </motion.div>
@@ -62,7 +62,7 @@ const EffectCards2 = () => {
     },
     {
       id: 5,
-      title: "CASE STUDIES",
+      title: "ABOUT",
       bgImage: "setup.jpg",
       borderColor: "teal",
       transform: hoveredCard === 5 ? "translateX(390px) translateY(-14px) rotate(16deg)" : "translateX(390px) translateY(46px) rotate(16deg)"

@@ -48,7 +48,7 @@ function Projects() {
       <div className='mt-10 ml-10 grid grid-cols-2'>
         {/* Kukuhub */}
         <motion.div 
-          className="w-[500px] h-[430px] bg-gradient-to-b from-orange-50 via-[#c5781fd8] to-[#70450e46] rounded-lg cursor-pointer"
+          className="w-[500px] h-[430px] bg-gradient-to-b from-orange-50 via-[#b36f17d8] to-[#e4952d46] rounded-lg cursor-pointer"
           onClick={() => openDrawer('kukuhub')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -62,14 +62,14 @@ function Projects() {
           </div>
           <h4 className="text-2xl font-semibold mt-4 px-6">.Kuku-Hub</h4>
           <div>
-            <p className='pl-6 text-gray-700 text-sm mt-5'>A comprehensive web inventory management system</p>
+            <p className='pl-6 text-gray-200 text-sm mt-5'>A comprehensive web inventory management system</p>
           </div>
           
         </motion.div>
 
         {/* Vicshy */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-green-50 via-[#146844ae] to-[#0e704a48] p-6 rounded-lg cursor-pointer"
+          className="w-[500px] h-[550px] bg-gradient-to-b from-green-50 via-[#146844ae] to-[#3bce9648] p-6 rounded-lg cursor-pointer"
           onClick={() => openDrawer('vicshiy')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -83,7 +83,7 @@ function Projects() {
             <img className="w-[400px] h-auto object-contain" src="/vicshiy-mockup.png" alt="Vicshy" />
           </div>
           <div>
-            <p className='text-center text-gray-700 text-sm'>Vicshiy Tours and Travel's official website</p>
+            <p className='text-center text-gray-200 text-sm'>Vicshiy Tours and Travel's official website</p>
           </div>
           
         </motion.div>
@@ -103,7 +103,7 @@ function Projects() {
             <img className="w-[380px] h-auto object-contain" src="/tepa-mockup.png" alt="TePA" />
           </div>
           <div>
-            <p className='text-center text-gray-700 text-sm mt-10'>Teenage Pregnancy Awareness Project official website</p>
+            <p className='text-center text-gray-200 text-sm mt-10'>Teenage Pregnancy Awareness Project official website</p>
           </div>
           
         </motion.div>
@@ -123,7 +123,7 @@ function Projects() {
             <img className="w-[450px] h-auto object-contain" src="/moodly2.png" alt="Moodly" />
           </div>
           <div>
-            <p className='text-center text-gray-700 text-sm'>A student mood tracking application for USIU-Africa</p>
+            <p className='text-center text-gray-200 text-sm'>A student mood tracking application for USIU-Africa</p>
           </div>
           
         </motion.div>
@@ -143,7 +143,7 @@ function Projects() {
             <img className="w-[400px] h-auto object-contain" src="/westwired2.png" alt="WestWired" />
           </div>
           <div>
-            <p className='text-center text-gray-700 text-sm'>An ecommerce website facilitating the purchase of electronic items such as headphones, laptops and mobile phones</p>
+            <p className='text-center text-gray-200 text-sm'>An ecommerce website facilitating the purchase of electronic items such as headphones, laptops and mobile phones</p>
           </div>
          
         </motion.div>

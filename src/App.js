@@ -22,7 +22,7 @@ import Projects2 from './components/Projects2';
 
 function App() {
 
- const [darkMode, setDarkMode] = useState(false)
+ const [darkMode, setDarkMode] = useState(true)
 
  const toggleDarkMode = () => {
   setDarkMode(!darkMode);
@@ -43,7 +43,7 @@ function App() {
     <BrowserRouter>
     <motion.div initial="hidden" animate="show" className={`${darkMode && "dark"}`}>
     <div  >
-      <div className='bg-white dark:bg-[#06070E]   sm:w-[1150px] mx-auto rounded-md md:mt-10 !overflow-x-hidden'>
+      <div className='bg-white dark:bg-gray-900   sm:w-[1150px] mx-auto rounded-md md:mt-10 !overflow-x-hidden'>
 
       
   

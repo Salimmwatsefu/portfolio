@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { homeAnimation, homeInfoAnimation, fadeIn, textVariant } from "../animation";
 import EffectCards from "./EffectCards";
 import EffectCards2 from "./EffectCards2";
+import MobileCardStack from "./MobileCardStack";
+
 
 
 
@@ -63,22 +65,28 @@ function Hero2() {
       />
 
 <section>
-  <div className="mx-auto max-w-screen-xl px-4 py-8  sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-screen-xl px-4 py-8  sm:px-6 lg:px-8 ">
     <div className=" ">
     
 
 
       <div className=" lg:ml-10 -mt-10 ">
         
-        <motion.h2 variants={textVariant()} className="text-3xl font-bold sm:text-4xl text-teal-800 dark:text-teal-700 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>Salim  Mwatsefu.</motion.h2>
+        <motion.h2 variants={textVariant()} className="text-3xl font-bold sm:text-4xl text- dark:text-teal-500 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
+        <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
+              {" "}Salim Mwatsefu
+            </span>
+        </motion.h2>
        
       
         <motion.div 
       variants={fadeIn('', '', 0.1, 1)}
       transition={{ delay: 2, duration: 1, type: "tween" }}
+
+      className=" "
       >
         <div>
-        <h2 className='text-lg font-semibold text-teal-600 dark:text-teal-800 mt-4 text-center'>Fullstack Developer</h2>
+        <h2 className='text-lg font-semibold text-teal-600 dark:text-teal-600 mt-4 text-center'>Fullstack Developer</h2>
             <p className='font-medium text-gray-700 dark:text-gray-400 text-center mt-5'>Software Developer from Nairobi, Kenya who likes to craft solid and scalable software <br/> products  with great user experiences.</p>
             </div>
             </motion.div>
@@ -93,23 +101,18 @@ function Hero2() {
         
       </div>
 
-    {/*<div
-        className="sm:relative h-[420px] sm:overflow-hidden  rounded-full shadow-xl md:shadow-teal-600 dark:shadow-teal-300  sm:h-80 order-last lg:h-full bg-teal-800"
-      >
-        
-        <img
-          alt="Salim"
-          src = "ill1.png"
-          //src="https://img.freepik.com/free-vector/saving-nature-with-technology-concept_52683-33408.jpg?size=626&ext=jpg"
-          className="absolute  sm:w-[1200px] w-[400px] h-[460px] sm:h-[600px] object-cover sm:object-center sm:-ml-40 -ml-36 -mt-5"
-/>
-     
-  </div>*/}
+    
 
-  <div className="ml-[370px] mt-20"
+  <div className="ml-[370px] mt-20 md:block hidden"
   
   >
     <EffectCards2 />
+  </div>
+
+  <div className="  md:hidden block "
+  
+  >
+    <MobileCardStack />
   </div>
 
   {/*<div><ShuffleGrid /></div>*/}

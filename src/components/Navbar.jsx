@@ -54,7 +54,7 @@ export default function Example({toggleDarkMode, darkMode}) {
 
                 <div className='  h-10 w-10 absolute top-8 right-[200px]'>
                 
-        <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      
      
                 </div>
 
