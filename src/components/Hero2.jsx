@@ -70,7 +70,7 @@ function Hero2() {
     
 
 
-      <div className=" lg:ml-10 -mt-10 ">
+      <div className=" lg:ml-10 lg:mt-1 mt-10">
         
         <motion.h2 variants={textVariant()} className="text-3xl font-bold sm:text-4xl text- dark:text-teal-500 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
         <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
