@@ -56,7 +56,7 @@ const MobileCardStack = () => {
       </motion.button>
       </div>
       <div className=" flex justify-center mt-10">
-      <div className="relative w-[80vw] h-[45vh] perspective-1000 ">
+      <div className="relative w-[65vw] h-[35vh] perspective-1000 ">
         <AnimatePresence>
           {cards.map((card, index) => (
             <motion.div
@@ -82,7 +82,7 @@ const MobileCardStack = () => {
               exit={{ y: 100, opacity: 0 }}
             >
              <div className={`bg-black bg-opacity-70 w-full h-full rounded-lg flex flex-col justify-start items-center p-4 `}>
-        <h3 className="text-3xl font-bold text-white mb-2 mt-14">{card.title}</h3>
+        <h3 className="text-base font-bold text-white mb-2 mt-14">{card.title}</h3>
       </div>
             </motion.div>
           ))}

@@ -11,6 +11,7 @@ import MobileCardStack from "./MobileCardStack";
 
 
 
+
 function Hero2() {
 
   const [mousePosition, setMousePosition] = useState({
@@ -70,9 +71,9 @@ function Hero2() {
     
 
 
-      <div className=" lg:ml-10 lg:mt-1 mt-10">
+      <div className=" lg:ml-10 lg:mt-1 mt-4">
         
-        <motion.h2 variants={textVariant()} className="text-3xl font-bold sm:text-4xl text- dark:text-teal-500 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
+        <motion.h2 variants={textVariant()} className="text-2xl font-bold sm:text-4xl text- dark:text-teal-500 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
         <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
               {" "}Salim Mwatsefu
             </span>
@@ -86,8 +87,8 @@ function Hero2() {
       className=" "
       >
         <div>
-        <h2 className='text-lg font-semibold text-teal-600 dark:text-teal-600 mt-4 text-center'>Fullstack Developer</h2>
-            <p className='font-medium text-gray-700 dark:text-gray-400 text-center mt-5'>Software Developer from Nairobi, Kenya who likes to craft solid and scalable software <br/> products  with great user experiences.</p>
+        <h2 className='text-sm font-semibold text-teal-600 dark:text-teal-600 mt-4 text-center'>Fullstack Developer</h2>
+            <p className='font-medium text-sm text-gray-700 dark:text-gray-400 text-center mt-5'>Software Developer from Nairobi, Kenya who likes to craft solid and scalable software <br/> products  with great user experiences.</p>
             </div>
             </motion.div>
             
