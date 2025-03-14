@@ -74,8 +74,8 @@ function Hero2() {
       <div className=" lg:ml-10 lg:mt-1 mt-4">
         
         <motion.h2 variants={textVariant()} className="text-2xl font-bold sm:text-5xl text- dark:text-teal-500 text-teal-800 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
-        <span className="dark:text-teal-500 text-teal-800 bg-clip-text text-transparent">
-              {" "}Salim Mwatsefu
+        <span className="dark:text-teal-500 text-teal-800">
+              Salim Mwatsefu
             </span>
         </motion.h2>
        
