@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Hero2 from './components/Hero2';
+import Hero3 from './components/Hero3';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import { useEffect, useState } from 'react';
@@ -22,7 +23,7 @@ import Projects2 from './components/Projects2';
 
 function App() {
 
- const [darkMode, setDarkMode] = useState(true)
+ const [darkMode, setDarkMode] = useState(false)
 
  const toggleDarkMode = () => {
   setDarkMode(!darkMode);
@@ -41,9 +42,9 @@ function App() {
 
   return (
     <BrowserRouter>
-    <motion.div initial="hidden" animate="show" className={`${darkMode && "dark"}`}>
+    <motion.div initial="hidden" animate="show" className={`${darkMode && "dark"} `}>
     <div  >
-      <div className='bg-white dark:bg-gray-900   sm:w-[1150px] mx-auto rounded-md md:mt-10 !overflow-x-hidden'>
+      <div className='bg-white dark:bg-gray-900   sm:w-[1150px] mx-auto rounded-md md:mt-10 !overflow-x-hidden scrollbar-hidden'>
 
       
   
@@ -51,13 +52,14 @@ function App() {
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
 
       <Routes>
-        <Route path='/' element={<Hero2 />} />
+        <Route path='/' element={<Hero3 />} />
 
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects/>} />
         <Route path='/outside-work' element={<OutsideWork />} />
         <Route path='/professional' element={<Professional />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/contact' element={<Contact />} />
   
       </Routes>
       </div>

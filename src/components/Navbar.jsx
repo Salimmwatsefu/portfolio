@@ -19,7 +19,7 @@ function classNames(...classes) {
 export default function Example({toggleDarkMode, darkMode}) {
   const handleResumeClick = () => {
     // Replace '/resume.pdf' with the actual path to your resume file
-    window.open('/Resume.pdf', '_blank');
+    window.open('/SalimMwatsefuCV25.pdf', '_blank');
   };
 
   return (
@@ -46,38 +46,39 @@ export default function Example({toggleDarkMode, darkMode}) {
                     alt="Your Company"
                   />
                   <img
-                    className="hidden w-28 lg:block mt-10 absolute  "
+                    className="hidden w-28 lg:block mt-10"
                     src="sjmwatzz.png"
                     alt="Your Company"
                   />
                 </div>
 
-                <div className='  h-10 w-10 absolute top-8 right-[200px]'>
+                <div className='  h-10 w-10 md:ml-24 md:mt-[70px] ml-5'>
                 
-      
+        <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
      
                 </div>
 
-                
+                <div className="hidden sm:ml-[630px] sm:block ">
+                  
+                    {/* Download link for Resume */}
+                    <button
+                      onClick={handleResumeClick}
+                      className={classNames(
+                        'bg-gradient-to-r from-teal-500 to-teal-800 text-gray-100',
+                        'px-5 py-3 mt-[70px] rounded-xl text-base font-normal'
+                      )}
+                    >
+                      Download Resume
+                    </button>
+                 
+                </div>
+               
               </div>
             </div>
           </div>
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-7 bg-gray-100">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? ' text-white' : 'text-gray-700 hover:bg-teal-800 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-normal'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
+             
               {/* Download link for Resume */}
               <button
                 onClick={handleResumeClick}

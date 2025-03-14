@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
+import Breadcrumb1 from './UI/BreadCrumb1';
+
 
 function Contact() {
 
@@ -32,8 +34,9 @@ function Contact() {
   };*/
 
   return (
-    <div className='mt-40'>
-        <div className='text-center'>
+    <div className=''>
+      <Breadcrumb1 currentPath='/contact' currentLabel='Contact' />
+        <div className='text-center mt-20'>
             <h1 className='flex justify-center font-bold text-5xl text-teal-800'>Send me a message!</h1>
             <p className='flex justify-center mt-6 text-xl font-medium text-gray-800 dark:text-gray-500'>Got a question or proposal, or just want</p>
             <p className='flex justify-center text-xl font-medium text-gray-800 dark:text-gray-500'>to say hello? Go ahead.</p>

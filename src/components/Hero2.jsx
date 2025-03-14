@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { homeAnimation, homeInfoAnimation, fadeIn, textVariant } from "../animation";
 import EffectCards from "./EffectCards";
 import EffectCards2 from "./EffectCards2";
-import MobileCardStack from "./MobileCardStack";
+
 
 
 
@@ -56,7 +56,7 @@ function Hero2() {
 
 
   return (
-    <div className=' '>
+    <div className=' h-screen overflow-auto scrollbar-hidden' >
         
 
 <motion.div
@@ -73,8 +73,8 @@ function Hero2() {
 
       <div className=" lg:ml-10 lg:mt-1 mt-4">
         
-        <motion.h2 variants={textVariant()} className="text-2xl font-bold sm:text-4xl text- dark:text-teal-500 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
-        <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
+        <motion.h2 variants={textVariant()} className="text-2xl font-bold sm:text-5xl text- dark:text-teal-500 text-teal-800 text-center  " onMouseEnter={textEnter} onMouseLeave={textLeave}>
+        <span className="dark:text-teal-500 text-teal-800 bg-clip-text text-transparent">
               {" "}Salim Mwatsefu
             </span>
         </motion.h2>
@@ -87,10 +87,20 @@ function Hero2() {
       className=" "
       >
         <div>
-        <h2 className='text-sm font-semibold text-teal-600 dark:text-teal-600 mt-4 text-center'>Fullstack Developer</h2>
+        <h2 className='text-lg font-semibold text-teal-600 dark:text-teal-600 mt-4 text-center'>Fullstack Developer</h2>
             <p className='font-medium text-sm text-gray-700 dark:text-gray-400 text-center mt-5'>Software Developer from Nairobi, Kenya who likes to craft solid and scalable software <br/> products  with great user experiences.</p>
             </div>
+
+            <div className= 'flex justify-center'>
+            <ul className='flex gap-10 text-2xl mt-5 text-teal-400'>
+                <li><a href='https://github.com/Salimmwatsefu'><BsGithub/></a></li>
+                <li><a href='https://twitter.com/SalimMwatsefu'><BsTwitter/></a></li>
+                <li><a href='https://www.linkedin.com/in/salim-mwatsefu-694685235/'><BsLinkedin/></a></li>
+            </ul>
+            </div>
             </motion.div>
+
+            
             
             
 
@@ -110,10 +120,21 @@ function Hero2() {
     <EffectCards2 />
   </div>
 
-  <div className="  md:hidden block "
+  <div className="  md:hidden flex justify-center "
   
   >
-    <MobileCardStack />
+    <motion.div 
+          transition={{ delay: 4, duration: 3, type: "spring", bounce: 0.6 }}
+          whileTap={{ rotate: 90, scale: 0.75 }}
+          >
+               <a href='mailto:sjmwatsefu@gmail.com'>
+                <button className='bg-teal-600 mt-9 rounded-full h-24 w-24'>
+                    
+                    <button className='rounded-full h-16 w-16 bg-teal-700 text-white text-sm'>Let's talk</button>
+             
+                </button>
+                </a>
+                </motion.div>
   </div>
 
   {/*<div><ShuffleGrid /></div>*/}

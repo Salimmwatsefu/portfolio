@@ -35,7 +35,7 @@ function Projects() {
       <div className='sm:ml-16'>
         <motion.h1 variants={textVariant()} className='font-bold text-4xl text-gray-700 dark:text-gray-300 text-center'>MY PROJECTS</motion.h1>
         <h2 className='font-bold text-5xl text-teal-600 -mt-7 text-center'>_</h2>
-        <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-lg text-gray-700 dark:text-gray-400 text-center'>
+        <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-sm text-gray-700 dark:text-gray-400 text-center'>
         These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code
           repositories and live demos. They showcase my ability to tackle
@@ -48,7 +48,7 @@ function Projects() {
       <div className='mt-10 ml-10 grid grid-cols-2'>
         {/* Kukuhub */}
         <motion.div 
-          className="w-[500px] h-[430px] bg-gradient-to-b from-orange-50 via-[#b36f17d8] to-[#e4952d46] rounded-lg cursor-pointer"
+          className="w-[500px] h-[430px] bg-gradient-to-b from-orange-200 via-[#b36f17d8] to-[#e4952d46] rounded-lg cursor-pointer"
           onClick={() => openDrawer('kukuhub')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -62,14 +62,14 @@ function Projects() {
           </div>
           <h4 className="text-2xl font-semibold mt-4 px-6">.Kuku-Hub</h4>
           <div>
-            <p className='pl-6 text-gray-200 text-sm mt-5'>A comprehensive web inventory management system</p>
+            <p className='pl-6 text-gray-700 text-sm mt-5 dark:text-gray-100'>A comprehensive web inventory management system</p>
           </div>
           
         </motion.div>
 
         {/* Vicshy */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-green-50 via-[#146844ae] to-[#3bce9648] p-6 rounded-lg cursor-pointer"
+          className="w-[500px] h-[550px] bg-gradient-to-b from-green-200 via-[#146844ae] to-[#3bce9648] p-6 rounded-lg cursor-pointer"
           onClick={() => openDrawer('vicshiy')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -83,14 +83,14 @@ function Projects() {
             <img className="w-[400px] h-auto object-contain" src="/vicshiy-mockup.png" alt="Vicshy" />
           </div>
           <div>
-            <p className='text-center text-gray-200 text-sm'>Vicshiy Tours and Travel's official website</p>
+            <p className='text-center text-gray-700 text-sm dark:text-gray-100'>Vicshiy Tours and Travel's official website</p>
           </div>
           
         </motion.div>
 
         {/* TePA */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-pink-50 via-[#db6274ae] to-[#94172a48] p-6 rounded-lg -mt-20"
+          className="w-[500px] h-[550px] bg-gradient-to-b from-pink-200 via-[#db6274ae] to-[#94172a48] p-6 rounded-lg -mt-20"
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
@@ -103,14 +103,14 @@ function Projects() {
             <img className="w-[380px] h-auto object-contain" src="/tepa-mockup.png" alt="TePA" />
           </div>
           <div>
-            <p className='text-center text-gray-200 text-sm mt-10'>Teenage Pregnancy Awareness Project official website</p>
+            <p className='text-center text-gray-700 text-sm mt-10 dark:text-gray-100'>Teenage Pregnancy Awareness Project official website</p>
           </div>
           
         </motion.div>
 
         {/* Moodly */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-blue-50 via-[#19578aae] to-[#183dad48] p-6 rounded-lg mt-10"
+          className="w-[500px] h-[550px] bg-gradient-to-b from-blue-200 via-[#19578aae] to-[#183dad48] p-6 rounded-lg mt-10"
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
@@ -123,14 +123,14 @@ function Projects() {
             <img className="w-[450px] h-auto object-contain" src="/moodly2.png" alt="Moodly" />
           </div>
           <div>
-            <p className='text-center text-gray-200 text-sm'>A student mood tracking application for USIU-Africa</p>
+            <p className='text-center text-gray-700 dark:text-gray-100 text-sm'>A student mood tracking application for USIU-Africa</p>
           </div>
           
         </motion.div>
 
         {/* Westwired */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-yellow-50 via-[#d9cb33ae] to-[#f3d12548] p-6 rounded-lg -mt-20"
+          className="w-[500px] h-[550px] bg-gradient-to-b from-yellow-200 via-[#d9cb33ae] to-[#f3d12548] p-6 rounded-lg -mt-20"
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
@@ -143,7 +143,7 @@ function Projects() {
             <img className="w-[400px] h-auto object-contain" src="/westwired2.png" alt="WestWired" />
           </div>
           <div>
-            <p className='text-center text-gray-200 text-sm'>An ecommerce website facilitating the purchase of electronic items such as headphones, laptops and mobile phones</p>
+            <p className='text-center text-gray-900 text-sm dark:text-gray-100'>An ecommerce website facilitating the purchase of electronic items such as headphones, laptops and mobile phones</p>
           </div>
          
         </motion.div>

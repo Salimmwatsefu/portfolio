@@ -34,7 +34,7 @@ const EffectCards2 = () => {
   const cardData = [
     {
       id: 1,
-      title: "OUTSIDE WORK",
+      title: "CONTACT",
       bgImage: "outside-work.jpg",
       borderColor: "teal",
       transform: hoveredCard === 1 ? "translateX(-270px) translateY(-20px) rotate(-16deg)" : "translateX(-270px) translateY(40px) rotate(-16deg)"

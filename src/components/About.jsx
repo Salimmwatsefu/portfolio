@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiCode, FiLayout, FiCommand, FiCpu, FiDatabase, FiFeather, } from "react-icons/fi";
 import { TbBrandReact, TbBrandTypescript } from "react-icons/tb";
 import Breadcrumb1 from './UI/BreadCrumb1';
+import { BiRightArrow } from "react-icons/bi";
 
 
 
@@ -36,16 +37,16 @@ const quotes = [
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <div className="inline-flex items-center gap-3 mb-6 text-teal-500">
-            
-            <span className="font-mono text-sm">Creative Philosophy</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight max-w-3xl mx-auto">
-            Building digital experiences that live at the intersection of 
-            <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
-              {" "}code and creativity
-            </span>
-          </h1>
+          
+          <div className='sm:ml-16'>
+        <h1 className='font-bold text-4xl text-gray-700 dark:text-gray-300 text-center '>ABOUT ME</h1>
+        <h2 className='font-bold text-5xl text-teal-600 -mt-7 text-center'>_</h2>
+        <p className='mt-3 text-sm text-gray-700 dark:text-gray-400 text-center'>
+          Here you find more information about me including my skill set. 
+        Building digital experiences that live at the intersection of code and creativity
+        </p>
+      </div>
+         
         </motion.div>
 
         
@@ -104,24 +105,24 @@ const quotes = [
 
 
 
-        <div className='flex justify-center gap-5 mb-20'>
-          <div className="inline-block px-4 py-2 bg-teal-500/10 rounded-full text-teal-500 font-mono text-sm ">
+        <div className='flex justify-center gap-5 mb-10'>
+          <div className="inline-block px-4 py-2 bg-teal-500/30 rounded-full text-teal-500 font-mono text-sm ">
                 <span className="mr-2">✦</span>
                 Frontend Obsession
               </div>
-              <div className="inline-block px-4 py-2 bg-teal-500/10 rounded-full text-teal-500 font-mono text-sm ">
+              <div className="inline-block px-4 py-2 bg-teal-500/30 rounded-full text-teal-500 font-mono text-sm ">
                 <span className="mr-2">#</span>
                 Pixel Perfect
               </div>
-              <div className="inline-block px-4 py-2 bg-teal-500/10 rounded-full text-teal-500 font-mono text-sm ">
+              <div className="inline-block px-4 py-2 bg-teal-500/30 rounded-full text-teal-500 font-mono text-sm ">
                 <span className="mr-2">✦</span>
                 Creative Coder
               </div>
-              <div className="inline-block px-4 py-2 bg-teal-500/10 rounded-full text-teal-500 font-mono text-sm ">
+              <div className="inline-block px-4 py-2 bg-teal-500/30 rounded-full text-teal-500 font-mono text-sm ">
                 <span className="mr-2">✦</span>
                 Accessible
               </div>
-              <div className="inline-block px-4 py-2 bg-teal-500/10 rounded-full text-teal-500 font-mono text-sm ">
+              <div className="inline-block px-4 py-2 bg-teal-500/30 rounded-full text-teal-500 font-mono text-sm ">
                 <span className="mr-2">✦</span>
                 Devops
               </div>
@@ -130,90 +131,132 @@ const quotes = [
        
 
         {/* Frontend Passion Section */}
-        <motion.div 
-          className="my-28 relative group"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-400/5 to-purple-500/5 rounded-3xl transform -rotate-1 -z-10" />
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+    
+    <div className=" flex items-center">
+
+      <div className="ml-4">
+        
+        
+      </div>
+    </div>
+
+    <div className="mt-8 grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2">
+      <blockquote>
+        <header className="sm:flex sm:items-center">
           
-          <div className="grid lg:grid-cols-2 gap-12 px-8 pt-14 pb-8 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl shadow-teal-400/10 ">
-            {/* Frontend Mastery */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-teal-500/10 rounded-xl">
-                  <TbBrandReact className="w-8 h-8 text-teal-500" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                  Frontend Arsenal
-                </h3>
+          <h1 className="mt-2 font-bold sm:ml-4 sm:mt-0 text-gray-700 dark:text-gray-300 text-2xl">
+          Get to know me!
+          </h1>
+        </header>
+
+        <p className='mt-5 text-gray-700 dark:text-gray-500 gap-3 text-base'>As a <span className='font-bold text-teal-800'>Fullstack Developer</span> I am proficient in both<br/> front-end and back-end technologies.<br/> In addition to my technical skills, I am a strong<br/> problem solver and have excellent communication skills.<br/>I am excited about the opportunity to use my skills and experience to create innovative solutions that make a positive impact.<br/> Check out some of
+        my work in the
+        <Link to={"#projects"} smooth>
+         <span className='font-bold text-teal-800'> Projects section.</span>
+         </Link>
+         </p>
+
+         <div className=' rounded-lg mt-10 '>
+
+          <div className='absolute border-2 border-teal-700 h-[400px] w-80 ml-10 mt-6  '></div>
+          <img
+          alt=''
+          src='salim.jpg'
+          className='rounded-lg w-80 z-50 relative'
+          />
+         </div>
+         
+
+        
+      </blockquote>
+
+      <blockquote>
+        <header class="sm:flex sm:items-center">
+          
+
+          <h1 class="mt-2 sm:ml-4 sm:mt-0 text-gray-700 dark:text-gray-300 font-bold text-2xl">
+            My Skills
+          </h1>
+        </header>
+
+        <h2 className='mt-10 font-semibold text-gray-600 dark:text-gray-400 text-xl'>FRONTEND APPS</h2>
+            <p className=' text-gray-700 gap-3 text-base mt-6 dark:text-gray-500'>I build intuitive and visually appealing client-side<br/>applications with modern features like SPA among<br/> other best practices for SEO optimisation. I Use<br/> modern tech such as:
+            
+            {/*<span className='text-teal-800 font-semibold'> React, TailwindCSS, and<br/> JavaScript.</span>*/}
+            <div className='grid grid-cols-2 mt-6 gap-2 ' >
+            <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Typescript
+              </span>
+            <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Javascript  (ES6+)
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Next Js
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>React Js
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Tailwind Css
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Framer Motion
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Bootstrap
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>HTML
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>CSS
+              </span>
               </div>
+              </p>
+            <h2 className='mt-16 font-semibold text-gray-600 dark:text-gray-400 text-xl'>BACKEND APPS</h2>
+            <p className=' text-gray-700 dark:text-gray-500 gap-3 text-base mt-6'>Build scalable and maintainable server applications<br/> using modern technology stacks such as: 
+            <div className='grid grid-cols-2 mt-6 gap-2'>
+            <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Ruby on Rails
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Sinatra
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Postgresql
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>SQlite3
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Javascript
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Flask
+              </span>
+              <span className='flex text-sm gap-2'>
+              <BiRightArrow className='text-xs mt-[4px] text-teal-500'/>Django
+              </span>
               
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { name: 'React', icon: <TbBrandReact className="w-5 h-5" /> },
-                  { name: 'TypeScript', icon: <TbBrandTypescript className="w-5 h-5" /> },
-                  { name: 'Next.js', icon: <FiCode className="w-5 h-5" /> },
-                  { name: 'Framer Motion', icon: <FiCommand className="w-5 h-5" /> },
-                  { name: 'Three.js', icon: <FiCpu className="w-5 h-5" /> },
-                  { name: 'Tailwind CSS', icon: <FiCode className="w-5 h-5" /> },
-                ].map((tech, i) => (
-                  <motion.div 
-                    key={i}
-                    whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/30 rounded-xl"
-                  >
-                    <span className="text-teal-500">{tech.icon}</span>
-                    <span className="font-medium text-gray-700 dark:text-gray-200">
-                      {tech.name}
-                    </span>
-                  </motion.div>
-                ))}
               </div>
-            </div>
+            </p>
 
-            {/* Backend Expertise */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-purple-500/10 rounded-xl">
-                  <FiDatabase className="w-8 h-8 text-purple-500" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                  Backend Toolkit
-                </h3>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { name: 'Ruby on Rails', icon: '🛤️' },
-                  { name: 'PostgreSQL', icon: '🐘' },
-                  { name: 'REST APIs', icon: '🔗' },
-                  { name: 'JWT Auth', icon: '🔐' },
-                  { name: 'Redis', icon: '🗃️' },
-                  { name: 'Docker', icon: '🐳' },
-                ].map((tech, i) => (
-                  <motion.div 
-                    key={i}
-                    whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700/30 rounded-xl"
-                  >
-                    <span className="text-purple-500">{tech.icon}</span>
-                    <span className="font-medium text-gray-700 dark:text-gray-200">
-                      {tech.name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
+            
+        
 
-          {/* Floating Badge */}
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-            <div className="px-6 py-2 bg-teal-700 text-white rounded-full text-sm font-medium shadow-lg">
-              Technical Spectrum
-            </div>
-          </div>
-        </motion.div>
+        
+
+        
+      </blockquote>
+
+     
+
+      
+      
+    </div>
+  </div>
 
         {/* CTA */}
         
