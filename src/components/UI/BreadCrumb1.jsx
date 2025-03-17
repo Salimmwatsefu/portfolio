@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Breadcrumb1 = ({ currentPath, currentLabel }) => {
   return (
-    <ul className='flex items-center md:ml-14 ml-2 md:text-base text-sm space-x-2 text-gray-500 md:mt-10 mt-5 syne-font'>
+    <ul className='flex items-center md:ml-14 ml-2 md:text-base text-sm space-x-2 text-gray-500 md:mt-10 sm:mt-5 mt-10 mb-12 syne-font'>
       <li>
         <NavLink
           to='/'

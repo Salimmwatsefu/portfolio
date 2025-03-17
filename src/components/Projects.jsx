@@ -5,6 +5,8 @@ import KukuhubDetails from './ProjectDetails/KukuhubDetails';
 import VicshyDetails from './ProjectDetails/VicshiyDetails';
 import { cardVariants, fadeIn, textVariant } from '../animation';
 import { motion, useInView } from 'framer-motion';
+import TepaDetails from './ProjectDetails/TepaDetails';
+import MoodlyDetails from './ProjectDetails/MoodlyDetails';
 
 
 
@@ -26,7 +28,7 @@ function Projects() {
  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <div className='mt-12 mx-3 pb-10' id='projects'>
+    <div className='mt-12 sm:mx-3 mx-0 pb-1' id='projects'>
       <motion.div  variants={fadeIn('', '', 0.1, 1)}>
       <Breadcrumb1 currentPath='/projects' currentLabel='Projects' />
 
@@ -38,17 +40,15 @@ function Projects() {
         <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 text-sm text-gray-700 dark:text-gray-400 text-center'>
         These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
+          repositories and live demos. 
         </motion.p>
         <motion.h2 variants={fadeIn('', '', 0.1, 1)} className='mt-8 font-semibold text-gray-600 text-3xl dark:text-gray-300'>Web Applications</motion.h2>
       </div>
 
-      <div className='mt-10 ml-10 grid grid-cols-2'>
+      <div className='mt-10 sm:ml-10 mx-5 grid md:grid-cols-2 space-y-5 sm:space-y-0 '>
         {/* Kukuhub */}
         <motion.div 
-          className="w-[500px] h-[430px] bg-gradient-to-b from-orange-200 via-[#b36f17d8] to-[#e4952d46] rounded-lg cursor-pointer"
+          className="sm:w-[500px] w-[380px] h-[430px] bg-gradient-to-b from-orange-200 via-[#b36f17d8] to-[#e4952d46] rounded-lg cursor-pointer"
           onClick={() => openDrawer('kukuhub')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -69,7 +69,7 @@ function Projects() {
 
         {/* Vicshy */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-green-200 via-[#146844ae] to-[#3bce9648] p-6 rounded-lg cursor-pointer"
+          className="sm:w-[500px] w-[380px] h-[550px] bg-gradient-to-b from-green-200 via-[#146844ae] to-[#3bce9648] p-6 rounded-lg cursor-pointer"
           onClick={() => openDrawer('vicshiy')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
@@ -90,7 +90,8 @@ function Projects() {
 
         {/* TePA */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-pink-200 via-[#db6274ae] to-[#94172a48] p-6 rounded-lg -mt-20"
+          className="sm:w-[500px] w-[380px] h-[550px] bg-gradient-to-b from-pink-200 via-[#db6274ae] to-[#94172a48] p-6 rounded-lg -mt-20"
+          onClick={() => openDrawer('tepa')}
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
@@ -110,8 +111,10 @@ function Projects() {
 
         {/* Moodly */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-blue-200 via-[#19578aae] to-[#183dad48] p-6 rounded-lg mt-10"
+          className="sm:w-[500px] w-[380px] h-[550px] bg-gradient-to-b from-blue-200 via-[#19578aae] to-[#183dad48] p-6 rounded-lg mt-10"
+          onClick={() => openDrawer('moodly')}
           variants={cardVariants}
+          
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
   whileHover="hover" // Hover effect
@@ -130,7 +133,7 @@ function Projects() {
 
         {/* Westwired */}
         <motion.div 
-          className="w-[500px] h-[550px] bg-gradient-to-b from-yellow-200 via-[#d9cb33ae] to-[#f3d12548] p-6 rounded-lg -mt-20"
+          className="sm:w-[500px] w-[380px] h-[550px] bg-gradient-to-b from-yellow-200 via-[#d9cb33ae] to-[#f3d12548] p-6 rounded-lg -mt-20"
           variants={cardVariants}
   initial="hidden" // Hidden before coming into view
   whileInView="visible" // Visible when in view
@@ -153,6 +156,8 @@ function Projects() {
       <Drawer isOpen={isDrawerOpen} onClose={closeDrawer}>
         {selectedProject === 'kukuhub' && <KukuhubDetails />}
         {selectedProject === 'vicshiy' && <VicshyDetails />}
+        {selectedProject === 'tepa' && <TepaDetails /> }
+        {selectedProject === 'moodly' && <MoodlyDetails /> }
       </Drawer>
     </div>
   );

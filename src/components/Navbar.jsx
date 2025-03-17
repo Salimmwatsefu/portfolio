@@ -1,16 +1,12 @@
-import { React, Fragment } from 'react';
-import { TfiEmail } from "react-icons/tfi";
+import { React, Fragment, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon  } from '@heroicons/react/24/outline';
-import { FiMoon, FiSun } from "react-icons/fi";
 import DarkModeButton from './DarkModeButton';
+import { HiMenu, HiX } from "react-icons/hi";
+import MobileMenu from './MobileMenu';
+import Drawer from './NavDrawer';
 
 
-const navigation = [
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Shelf', href: 'https://medium.com/@sjmwatsefu', current: false },
-];
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -18,81 +14,62 @@ function classNames(...classes) {
 
 export default function Example({toggleDarkMode, darkMode}) {
   const handleResumeClick = () => {
-    // Replace '/resume.pdf' with the actual path to your resume file
     window.open('/SalimMwatsefuCV25.pdf', '_blank');
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <Disclosure as="nav" className=" ">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block w-40 lg:hidden mt-5 ml-5"
-                    src="sjmwatzz.png"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden w-28 lg:block mt-10"
-                    src="sjmwatzz.png"
-                    alt="Your Company"
-                  />
-                </div>
-
-                <div className='  h-10 w-10 md:ml-24 md:mt-[70px] ml-5'>
-                
-        <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-     
-                </div>
-
-                <div className="hidden sm:ml-[630px] sm:block ">
-                  
-                    {/* Download link for Resume */}
-                    <button
-                      onClick={handleResumeClick}
-                      className={classNames(
-                        'bg-gradient-to-r from-teal-500 to-teal-800 text-gray-100',
-                        'px-5 py-3 mt-[70px] rounded-xl text-base font-normal'
-                      )}
-                    >
-                      Download Resume
-                    </button>
-                 
-                </div>
-               
-              </div>
+    <nav className=" ">
+      <div className="mx-auto max-w-7xl px-1 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between">
+          <div className="flex flex-1 items-center  sm:items-stretch sm:justify-start">
+            <div className="flex flex-shrink-0 items-center ">
+              <img
+                className=" w-28 mt-10"
+                src="sjmwatzz.png"
+                alt="Your Company"
+              />
             </div>
-          </div>
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-7 bg-gray-100">
-             
-              {/* Download link for Resume */}
+
+            <div className='h-10 w-10 md:ml-24 md:mt-[70px] ml-5 mt-[30px]'>
+              <DarkModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            </div>
+
+            <div className="sm:ml-[630px] ml-5">
               <button
                 onClick={handleResumeClick}
                 className={classNames(
-                  'text-gray-700 hover:bg-teal-800 hover:text-white',
-                  'block px-3 py-2 rounded-md text-base font-normal'
+                  'bg-gradient-to-r from-teal-500 to-teal-800 text-gray-100',
+                  'sm:px-5 px-2 sm:py-3 py-2 sm:mt-[70px] mt-[30px] rounded-xl sm:text-base text-sm font-normal'
                 )}
               >
-                Resume
+                Download Resume
               </button>
             </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+
+            <div className="block  md:hidden bg-white rounded ml-7 mt-[30px]">
+          <button onClick={openMenu} className="text-3xl">
+            <HiMenu className='mt-1 w-10' />
+          </button>
+           
+          </div>
+          </div>
+        </div>
+      </div>
+      <Drawer isOpen={isMenuOpen} onClose = {closeMenu}>
+ <MobileMenu onClose={closeMenu} />
+</Drawer>
+    </nav>
   );
 }
